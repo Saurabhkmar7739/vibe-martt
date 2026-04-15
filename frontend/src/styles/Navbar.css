@@ -1,0 +1,142 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: var(--primary);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-link {
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+  border-bottom-color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-link.active {
+  opacity: 1;
+  border-bottom-color: white;
+}
+
+.nav-button {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.cart-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background: var(--accent);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 12px;
+    gap: 16px;
+  }
+
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  .navbar-links {
+    gap: 12px;
+  }
+
+  .nav-link {
+    font-size: 12px;
+    padding: 6px 0;
+  }
+
+  .nav-button {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px 10px;
+  }
+
+  .navbar-brand {
+    font-size: 1.1rem;
+    gap: 4px;
+  }
+
+  .navbar-links {
+    gap: 8px;
+  }
+
+  .nav-link,
+  .nav-button {
+    font-size: 11px;
+    padding: 4px;
+  }
+}
